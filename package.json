@@ -30,6 +30,7 @@
     "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-customurlscheme": "5.0.0",
     "cordova-plugin-inappbrowser": "3.2.0",
+    "cordova-universal-links-plugin-fix": "1.2.1",
     "core-js": "^2.5.4",
     "firebase": "^7.8.2",
     "rxjs": "~6.5.1",
@@ -79,7 +80,8 @@
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-customurlscheme": {
         "URL_SCHEME": "com.meumobi.kubi"
-      }
+      },
+      "cordova-universal-links-plugin": {}
     },
     "platforms": [
       "ios"

@@ -102,7 +102,7 @@
     <universal-links>
         <host name="mmbdemos.page.link" scheme="https" />
         <host name="meu-starter.firebaseapp.com" scheme="https">
-            <path url="/__/auth/callback"/>
+            <path url="/__/auth/callback" />
         </host>
     </universal-links>
 </widget>
