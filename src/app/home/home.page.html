@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Auth
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Email Address</ion-label>
+      <ion-input [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Auth Domain</ion-label>
+      <ion-input [(ngModel)]="domain"></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-select [(ngModel)]="provider" type="text">
+        <ion-select-option [value]="provider" *ngFor="let provider of providers">{{ provider }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="signInWithRedirect()">
+    Sign-in
+  </ion-button>
+</ion-content>

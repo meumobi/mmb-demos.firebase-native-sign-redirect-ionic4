@@ -1,0 +1,7 @@
+{
+  "name": "mmb-demos-auth",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
