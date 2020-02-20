@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 
@@ -7,7 +7,7 @@ import { auth } from 'firebase/app';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit  {
 
   email: string = 'conte@uniarp.edu.br';
   domain: string = 'uniarp.edu.br';
@@ -20,6 +20,16 @@ export class HomePage {
   constructor(
     private afAuth: AngularFireAuth
   ) {}
+
+  ngOnInit() {
+    this.afAuth.auth.getRedirectResult().then(function(result) {
+      console.log(result);
+    })
+    .catch( error => {
+      console.log(error);
+      throw(error);
+    });
+  }
 
   signInWithRedirect() {
     const provider = this.provider;
@@ -35,7 +45,6 @@ export class HomePage {
     return this.afAuth.auth.signInWithRedirect(oAuthProvider).then(data=>console.log(data))
     .catch( error => {
       console.log(error);
-
       throw(error);
     });
   }
